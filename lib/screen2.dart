@@ -166,8 +166,8 @@ class Screen2 extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TextFormField(
-                    validator: (value){
-                      if(value!.isEmpty) {
+                    validator: (value) {
+                      if (value!.isEmpty) {
                         return "enter your email";
                       }
                     },
@@ -176,22 +176,21 @@ class Screen2 extends StatelessWidget {
                     style: GoogleFonts.poppins(),
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
-                      prefixIcon: const Icon(Icons.account_circle),
-                      suffixIcon: const Icon(Icons.remove_red_eye),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(24),
-                        borderSide: const BorderSide(width: 5)
-                      ),
-                      //hintText: "enter text",
-                      labelText: "enter email"
-                    ),
-              ),
-                  ElevatedButton(onPressed: (){
-                    if(fromKey.currentState!.validate()){
-                      emailTEController.clear();
-                    };
-                  }, child: const Text("Submit")),
-
+                        prefixIcon: const Icon(Icons.account_circle),
+                        suffixIcon: const Icon(Icons.remove_red_eye),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(24),
+                            borderSide: const BorderSide(width: 5)),
+                        //hintText: "enter text",
+                        labelText: "enter email"),
+                  ),
+                  ElevatedButton(
+                      onPressed: () {
+                        if (fromKey.currentState!.validate()) {
+                          emailTEController.clear();
+                        }
+                      },
+                      child: const Text("Submit")),
                   Text(
                     "Md. Najmul Islam",
                     style: GoogleFonts.poppins(
@@ -212,13 +211,13 @@ class Screen2 extends StatelessWidget {
                   TextButton(onPressed: () {}, child: const Text("Button 2")),
                   OutlinedButton(
                       onPressed: () {
-                        DialogBox(context);
+                        dialogBox(context);
                       },
                       child: const Text("OutlineButton")),
                   InkWell(
                     splashColor: Colors.green,
                     onTap: () {
-                      DialogBox(context);
+                      dialogBox(context);
                     },
                     child: const Card(
                       color: Colors.red,
@@ -240,7 +239,7 @@ class Screen2 extends StatelessWidget {
         backgroundColor: Colors.green.shade700,
         onPressed: () {
           showModalBottomSheet(
-            isScrollControlled: true,
+              isScrollControlled: true,
               context: context,
               builder: (context) {
                 return Container(
@@ -253,7 +252,7 @@ class Screen2 extends StatelessWidget {
     );
   }
 
-  DialogBox(BuildContext context) {
+  dialogBox(BuildContext context) {
     showDialog(
         context: context,
         builder: (context) {

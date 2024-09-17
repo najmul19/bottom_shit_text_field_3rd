@@ -1,4 +1,3 @@
-
 import 'package:bottom_shit_text_filed/screen2.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +12,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:  Screen2(),
+      home: Screen2(),
       theme: ThemeData(
         useMaterial3: true,
       ),
@@ -39,14 +38,14 @@ class Home extends StatelessWidget {
           "title",
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
         ),
-        actions: [
-          const Icon(Icons.home),
-          const Icon(Icons.search),
-          const Icon(Icons.email),
-          const Icon(Icons.contact_mail),
-          const Icon(Icons.person),
-          const Icon(Icons.add_circle),
-          const Icon(Icons.add),
+        actions: const [
+          Icon(Icons.home),
+          Icon(Icons.search),
+          Icon(Icons.email),
+          Icon(Icons.contact_mail),
+          Icon(Icons.person),
+          Icon(Icons.add_circle),
+          Icon(Icons.add),
         ],
       ),
       body: SingleChildScrollView(
@@ -95,9 +94,9 @@ class Home extends StatelessWidget {
               ),
               ClipOval(
                   child: Image.network(
-                    "https://scontent.fdac22-1.fna.fbcdn.net/v/t39.30808-6/455890343_999955728807433_6785008603388102544_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Hxq16cDDjC0Q7kNvgFz4YOx&_nc_ht=scontent.fdac22-1.fna&_nc_gid=A50nPVTkEu2b4h4QUonGRvD&oh=00_AYCKI0xT5pzwDc5AVG5Nsqzn-vGmmH7di9bx8zxfze0MCA&oe=66EE1F38",
-                    height: 200,
-                  )),
+                "https://scontent.fdac22-1.fna.fbcdn.net/v/t39.30808-6/455890343_999955728807433_6785008603388102544_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Hxq16cDDjC0Q7kNvgFz4YOx&_nc_ht=scontent.fdac22-1.fna&_nc_gid=A50nPVTkEu2b4h4QUonGRvD&oh=00_AYCKI0xT5pzwDc5AVG5Nsqzn-vGmmH7di9bx8zxfze0MCA&oe=66EE1F38",
+                height: 200,
+              )),
               ClipRRect(
                   borderRadius: const BorderRadius.all(Radius.circular(20)),
                   child: Image.network(
